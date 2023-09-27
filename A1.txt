@@ -1,0 +1,103 @@
+CISC/CMPE 457 Assignment 1
+Due Thursday, September 21 at noon
+
+
+You may work alone or in pairs.  Do not show any of your code to
+anybody outside your group.  If you keep code on github, keep it
+private so that others cannot see it.
+
+
+You are to modify an image editor to
+
+  - rotate images
+  - scale images
+  - scale and bias the pixel intensities
+  - use forward and backward projection
+
+  See "YOUR CODE HERE" in scene.cpp.
+
+  Change only the code in editor.cpp.
+
+
+How to run the code
+
+  On Linux or MacOS, go in to the 'linux' or 'macos' directory and execute
+
+    make
+    ./editor ../images/strawberries.png
+
+  You can try other images in the 'images' directory, especially the
+  flower and parrot, which have transparent pixels.
+
+  On Windows with Visual Studio 2019, OPEN THE ASSIGNMENT BY
+  DOUBLE-CLICKING ON 'editor.vcxproj' IN THE 'windows' FOLDER.
+
+  If you have a version of Visual Studio more recent than 2019, you
+  might need to change some things in the project configuration.
+
+  In Visual Studio, put the image filename in the project properties
+  as a command-line argument in the Debugging section.
+
+
+In the window
+
+  Select the editing mode by pressing
+
+    T - to translate
+    R - to rotate
+    S - to scale
+    I - to modify intensity
+
+  Select the projection mode by pressing
+  
+    F - for forward projection
+    B - for backward projection
+
+  After selecting an editing mode, left click the mouse and drag it.
+
+    For translation (already provided), the image will exactly follow
+    the mouse.
+
+    For rotation, moving the mouse around the image centre shall
+    rotate the image around the image centre.
+
+    For scaling, moving the mouse toward or away from the image centre
+    shall scale the image smaller or larger, respectively.
+
+    For modifying intensity, moving the mouse up or down shall
+    increase or decrease the brightness, respectively, while moving
+    the mouse left or right shall increase or decrease the contrast,
+    respectively.
+
+Coding
+
+  First get forward projection working.  Only then should you
+  uncomment the three lines in project().
+
+  Then get the first part in stopMouseMotion() working so that your
+  translations do not snap back when you click the mouse again (this
+  is a single line of code).
+
+  Next get rotation and scaling working.
+
+  Then do backward projection, where you'll see a difference between
+  forward and backward projection after scaling or rotating.
+
+  Finally, do the intensity modifications.  You'll need to get the
+  second part in stopMouseMotion() working to preserve the
+  modifications (this is a single line of code).
+
+
+To Hand In
+
+  Make a directory called 'a1'.  In that directory, put exactly three
+  files:
+
+    - editor.cpp
+    - editor.h
+    - README.txt     with your name(s) and netID(s)
+
+  Create a zip archive a1.zip of the a1 directory and submit it to OnQ.
+
+  You will lose marks if you do not follow these submission
+  instructions exactly.
